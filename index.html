@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Atharv Patil | ENTC Engineer</title>
+
+  <style>
+    /* CSS Variables - stores all colors in one place */
+    :root {
+      --bg:     #0d1117;
+      --border: #30363d;
+      --accent: #58a6ff;
+      --accent2:#3fb950;
+      --text:   #e6edf3;
+      --muted:  #8b949e;
+    }
+
+    /* Reset - removes default browser spacing */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: sans-serif;
+      line-height: 1.7;
+    }
+
+    /* Navigation Bar */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 48px;
+      background: #0d1117;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    /* Sections */
+    section {
+      min-height: 100vh;
+      padding: 100px 48px 60px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    /* HOME */
+    #home {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .tag {
+      font-size: 0.8rem;
+      color: var(--accent2);
+      letter-spacing: 3px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .highlight { color: var(--accent); }
+
+    .subtitle {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 520px;
+    }
+
+    /* Resume button */
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      border: 1.5px solid var(--accent);
+      color: var(--accent);
+      font-size: 0.85rem;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn:hover {
+      background: var(--accent);
+      color: var(--bg);
+    }
+
+    /* Section label above h2 */
+    .section-title {
+      font-size: 0.75rem;
+      color: var(--accent2);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 32px;
+    }
+
+    /* ABOUT */
+    .about-text {
+      color: var(--muted);
+      font-size: 0.97rem;
+    }
+
+    .about-text p {
+      margin-bottom: 14px;
+    }
+
+    /* PROJECTS */
+    .project-item {
+      margin-bottom: 28px;
+    }
+
+    .project-item h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .project-item p {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 28px;
+      font-size: 0.75rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 640px) {
+      nav { padding: 14px 20px; }
+      section { padding: 100px 20px 50px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HOME -->
+  <section id="home">
+    <p class="tag">welcome</p>
+    <h1>
+      Hi, I'm<br/>
+      <span class="highlight">Atharv Patil.</span>
+    </h1>
+    <p class="subtitle">
+      First-year ENTC student with a passion for building things,
+      from gesture-controlled drones to smart home sensors.
+      Aspiring to become a successful electronics engineer.
+    </p>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <p class="section-title">about me</p>
+    <h2>Who I Am</h2>
+
+    <div class="about-text">
+      <p>
+        I'm Atharv Patil, a first-year Electronics and Telecommunication (ENTC)
+        Engineering student. I love combining hardware and software to create
+        projects that solve real-world problems.
+      </p>
+      <p>
+        My dream is to grow into a skilled ENTC engineer who builds impactful
+        technology, whether it's embedded systems or smart applications.
+        My key areas of interest include Electronics, Arduino, Sensors,
+        App Development and Problem Solving.
+      </p>
+      <p>
+        I have also earned industry-recognized certifications including
+        Cisco 1 and 2, NASSCOM, and Anthropic, reflecting my commitment
+        to learning beyond the classroom.
+      </p>
+
+      <ul style="margin-top: 16px; margin-left: 20px; color: var(--muted); font-size: 0.97rem; line-height: 2;">
+        <li>CGPA: 7.5 in Semester 1</li>
+        <li>MHT-CET Score: 94 Percentile</li>
+        <li>Projects Built: 4</li>
+      </ul>
+
+      <a href="https://drive.google.com/file/d/1TBKbO-DJwplkZfQLhTr8nVewYHWjfqgn/view?usp=drivesdk"
+         target="_blank" class="btn" style="margin-top: 24px; display: inline-block;">
+        My Resume
+      </a>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <p class="section-title">my work</p>
+    <h2>Projects</h2>
+
+    <div class="project-item">
+      <h3>Gesture Controlled Drone</h3>
+      <p>A drone that responds to hand gestures using sensor data, eliminating the need for a traditional remote controller.</p>
+    </div>
+
+    <div class="project-item">
+      <h3>Motion Sensor Alarm</h3>
+      <p>A security alarm system that detects movement using a PIR sensor and triggers an alert automatically.</p>
+    </div>
+
+    <div class="project-item">
+      <h3>Hostel Entry/Exit App</h3>
+      <p>A mobile app that digitally manages and records student entry and exit from hostel premises in real time.</p>
+    </div>
+
+    <div class="project-item">
+      <h3>Rain Sensor Windows</h3>
+      <p>An automated window system that detects rainfall using a sensor and closes the window without any manual effort.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <p class="section-title">get in touch</p>
+    <h2>Contact Me</h2>
+
+    <p style="color: var(--muted); font-size: 0.97rem; margin-bottom: 28px;">
+      Feel free to reach out for collaborations, project ideas, or just to say hello!
+    </p>
+
+    <p style="color: var(--muted); font-size: 0.97rem; margin-bottom: 4px;">
+      <strong style="color: var(--text);">Phone No.</strong>
+    </p>
+    <p style="color: var(--muted); font-size: 0.97rem; margin-bottom: 20px;">
+      <a href="tel:+919022003254" style="color: var(--accent); text-decoration: none;">+91 90220 03254</a>
+    </p>
+
+    <p style="color: var(--muted); font-size: 0.97rem; margin-bottom: 4px;">
+      <strong style="color: var(--text);">Email</strong>
+    </p>
+    <p style="color: var(--muted); font-size: 0.97rem; margin-bottom: 20px;">
+      <a href="mailto:202501070128@mitaoe.ac.in" style="color: var(--accent); text-decoration: none;">202501070128@mitaoe.ac.in</a>
+    </p>
+
+    <p style="color: var(--muted); font-size: 0.97rem;">MIT Academy of Engineering, Pune</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2025 Atharv Patil &nbsp;·&nbsp; ENTC Engineering Student
+  </footer>
+
+</body>
+</html>
