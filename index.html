@@ -5,7 +5,7 @@
   <title>Atharv Patil | ENTC Engineer</title>
 
   <style>
-    /* CSS Variables - stores all colors in one place */
+    /* CSS Variables - stores all colors and fonts in one place */
     :root {
       --bg:     #0d1117;
       --border: #30363d;
@@ -37,6 +37,12 @@
       padding: 16px 48px;
       background: #0d1117;
       border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-size: 1rem;
+      color: var(--accent);
+      letter-spacing: 2px;
     }
 
     .nav-links {
@@ -137,7 +143,17 @@
 
     /* PROJECTS */
     .project-item {
-      margin-bottom: 28px;
+      background: #161b22;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 20px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .project-item:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
     }
 
     .project-item h3 {
@@ -150,6 +166,15 @@
     .project-item p {
       font-size: 0.95rem;
       color: var(--muted);
+    }
+
+    /* CONTACT */
+    .contact-box {
+      background: #161b22;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 32px;
+      max-width: 480px;
     }
 
     /* Footer */
@@ -171,7 +196,7 @@
 
 <body>
 
-  <!-- NAVBAR -->
+  <!-- ══════════════════════════════ NAVBAR ══════════════════════════════ -->
   <nav>
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
@@ -181,7 +206,7 @@
     </ul>
   </nav>
 
-  <!-- HOME -->
+  <!-- ══════════════════════════════ HOME ══════════════════════════════ -->
   <section id="home">
     <p class="tag">welcome</p>
     <h1>
@@ -195,97 +220,111 @@
     </p>
   </section>
 
-  <!-- ABOUT -->
+  <!-- ══════════════════════════════ ABOUT ══════════════════════════════ -->
   <section id="about">
     <p class="section-title">about me</p>
     <h2>Who I Am</h2>
 
-    <div class="about-text">
-      <p>
-        I'm Atharv Patil, a first-year Electronics and Telecommunication (ENTC)
-        Engineering student. I love combining hardware and software to create
-        projects that solve real-world problems.
-      </p>
-      <p>
-        My dream is to grow into a skilled ENTC engineer who builds impactful
-        technology, whether it's embedded systems or smart applications.
-        My key areas of interest include Electronics, Arduino, Sensors,
-        App Development and Problem Solving.
-      </p>
-      <p>
-        I have also earned industry-recognized certifications including
-        Cisco 1 and 2, NASSCOM, and Anthropic, reflecting my commitment
-        to learning beyond the classroom.
-      </p>
+    <div class="about-grid">
 
-      <ul style="margin-top: 16px; margin-left: 20px; color: var(--muted); font-size: 0.97rem; line-height: 2;">
-        <li>CGPA: 7.5 in Semester 1</li>
-        <li>MHT-CET Score: 94 Percentile</li>
-        <li>Projects Built: 4</li>
-      </ul>
+      <!-- Left side: text -->
+      <div class="about-text">
+        <p>
+          I'm Atharv Patil, a first-year Electronics and Telecommunication (ENTC)
+          Engineering student. I love combining hardware and software to create
+          projects that solve real-world problems.
+        </p>
+        <p>
+          My dream is to grow into a skilled ENTC engineer who builds impactful
+          technology, whether it's embedded systems or smart applications.
+          My key areas of interest include Electronics, Arduino, Sensors,
+          App Development and Problem Solving.
+        </p>
+        <p>
+          I have also earned industry-recognized certifications including
+          Cisco 1 and 2, NASSCOM, and Anthropic, reflecting my commitment
+          to learning beyond the classroom.
+        </p>
 
-      <a href="https://drive.google.com/file/d/1TBKbO-DJwplkZfQLhTr8nVewYHWjfqgn/view?usp=drivesdk"
-         target="_blank" class="btn" style="margin-top: 24px; display: inline-block;">
-        My Resume
-      </a>
+        <!-- Academic highlights as bullet points -->
+        <ul style="margin-top: 16px; margin-left: 20px; color: var(--muted); font-size: 0.97rem; line-height: 2;">
+          <li>CGPA: 7.5 in Semester 1</li>
+          <li>MHT-CET Score: 94 Percentile</li>
+          <li>Projects Built: 4</li>
+        </ul>
+
+        <!-- Resume button -->
+        <a href="https://drive.google.com/file/d/1TBKbO-DJwplkZfQLhTr8nVewYHWjfqgn/view?usp=drivesdk"
+           target="_blank" class="btn" style="margin-top: 24px; display: inline-block;">
+          My Resume
+        </a>
+      </div>
+
     </div>
   </section>
 
-  <!-- PROJECTS -->
+  <!-- ══════════════════════════════ PROJECTS ══════════════════════════════ -->
   <section id="projects">
     <p class="section-title">my work</p>
     <h2>Projects</h2>
 
-    <div class="project-item">
-      <h3>Gesture Controlled Drone</h3>
-      <p>A drone that responds to hand gestures using sensor data, eliminating the need for a traditional remote controller.</p>
-    </div>
+    <div>
 
-    <div class="project-item">
-      <h3>Motion Sensor Alarm</h3>
-      <p>A security alarm system that detects movement using a PIR sensor and triggers an alert automatically.</p>
-    </div>
+      <!-- Project 1 -->
+      <div class="project-item">
+        <h3>Gesture Controlled Drone</h3>
+        <p>A drone that responds to hand gestures using sensor data, eliminating the need for a traditional remote controller.</p>
+      </div>
 
-    <div class="project-item">
-      <h3>Hostel Entry/Exit App</h3>
-      <p>A mobile app that digitally manages and records student entry and exit from hostel premises in real time.</p>
-    </div>
+      <!-- Project 2 -->
+      <div class="project-item">
+        <h3>Motion Sensor Alarm</h3>
+        <p>A security alarm system that detects movement using a PIR sensor and triggers an alert automatically.</p>
+      </div>
 
-    <div class="project-item">
-      <h3>Rain Sensor Windows</h3>
-      <p>An automated window system that detects rainfall using a sensor and closes the window without any manual effort.</p>
+      <!-- Project 3 -->
+      <div class="project-item">
+        <h3>Hostel Entry/Exit App</h3>
+        <p>A mobile app that digitally manages and records student entry and exit from hostel premises in real time.</p>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-item">
+        <h3>Rain Sensor Windows</h3>
+        <p>An automated window system that detects rainfall using a sensor and closes the window without any manual effort.</p>
+      </div>
+
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- ══════════════════════════════ CONTACT ══════════════════════════════ -->
   <section id="contact">
     <p class="section-title">get in touch</p>
     <h2>Contact Me</h2>
 
-    <p style="color: var(--muted); font-size: 0.97rem; margin-bottom: 28px;">
-      Feel free to reach out for collaborations, project ideas, or just to say hello!
-    </p>
+    <div class="contact-box">
+      <p style="color: var(--muted); font-size: 0.97rem; margin-bottom: 28px;">
+        Feel free to reach out for collaborations, project ideas,
+        or just to say hello!
+      </p>
 
-    <p style="color: var(--muted); font-size: 0.97rem; margin-bottom: 4px;">
-      <strong style="color: var(--text);">Phone No.</strong>
-    </p>
-    <p style="color: var(--muted); font-size: 0.97rem; margin-bottom: 20px;">
-      <a href="tel:+919022003254" style="color: var(--accent); text-decoration: none;">+91 90220 03254</a>
-    </p>
+      <p style="color: var(--muted); font-size: 0.97rem; margin-bottom: 4px;"><strong style="color: var(--text);">Phone No.</strong></p>
+      <p style="color: var(--muted); font-size: 0.97rem; margin-bottom: 20px;">
+        <a href="tel:+919022003254" style="color: var(--accent); text-decoration: none;">+91 90220 03254</a>
+      </p>
 
-    <p style="color: var(--muted); font-size: 0.97rem; margin-bottom: 4px;">
-      <strong style="color: var(--text);">Email</strong>
-    </p>
-    <p style="color: var(--muted); font-size: 0.97rem; margin-bottom: 20px;">
-      <a href="mailto:202501070128@mitaoe.ac.in" style="color: var(--accent); text-decoration: none;">202501070128@mitaoe.ac.in</a>
-    </p>
+      <p style="color: var(--muted); font-size: 0.97rem; margin-bottom: 4px;"><strong style="color: var(--text);">Email</strong></p>
+      <p style="color: var(--muted); font-size: 0.97rem; margin-bottom: 20px;">
+        <a href="mailto:202501070128@mitaoe.ac.in" style="color: var(--accent); text-decoration: none;">202501070128@mitaoe.ac.in</a>
+      </p>
 
-    <p style="color: var(--muted); font-size: 0.97rem;">MIT Academy of Engineering, Pune</p>
+      <p style="color: var(--muted); font-size: 0.97rem;">MIT Academy of Engineering, Pune</p>
+    </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ══════════════════════════════ FOOTER ══════════════════════════════ -->
   <footer>
-    &copy; 2025 Atharv Patil &nbsp;·&nbsp; ENTC Engineering Student
+    © 2025 Atharv Patil &nbsp;·&nbsp; ENTC Engineering Student
   </footer>
 
 </body>
